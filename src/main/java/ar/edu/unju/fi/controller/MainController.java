@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class Prueba1 {
+public class MainController {
 	@GetMapping("/index")
 	public String main(Model model) {
 		return "index";
@@ -16,5 +16,15 @@ public class Prueba1 {
 	@GetMapping("/prueba")
 	public String main2(Model model) {
 		return "prueba";
+	}
+	
+	@GetMapping("/login")
+	public String main3(Model model) {
+		return "login";
+	}
+	
+	@GetMapping("/consultor")
+	public String main4(Model model) {
+		return "consultor";
 	}
 }

@@ -27,4 +27,12 @@ public class MainController {
 	public String main4(Model model) {
 		return "consultor";
 	}
+	@GetMapping("/registrador")
+	public String main5(Model model) {
+		return "registrador";
+	}
+	@GetMapping("/bd")
+	public String main6(Model model) {
+		return "bd";
+	}
 }

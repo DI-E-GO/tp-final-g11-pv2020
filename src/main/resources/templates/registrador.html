@@ -7,36 +7,165 @@
 	href="webjars/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-<div th:insert="layout/header::header"></div>
+	<div th:insert="layout/header::header"></div>
 
 	<div class="container">
-		<div class="container">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item active" aria-current="page">Home</li>
-			</ol>
-		</nav>
+		<div class="row justify-content-center mt-5 mb-5">
+			<div class="col-md-8 col-sm-11">
+				<div class="card">
+					<div class="card-header text-center">Gestionar Registros
+						Vehículos</div>
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<label for="vehiculos">Datos del Vehículo</label>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">N°
+											Patente</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Color</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
 
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Library</li>
-			</ol>
-		</nav>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Titular</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Marca</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
 
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item"><a href="#">Library</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Data</li>
-			</ol>
-		</nav>
-	</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Modelo</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Tipo</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">N°
+											Chasis</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">N°
+											Motor</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Tripulantes</label>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Documento</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Nacionalidad</span>
+									</div>
+									<input type="text" class="form-control"
+										aria-label="Sizing example input"
+										aria-describedby="inputGroup-sizing-default">
+								</div>
+								<button type="button" class="btn btn-primary mb-3">Agregar
+									Tripulante</button>
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">First</th>
+											<th scope="col">Last</th>
+											<th scope="col">Handle</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="row form-group justify-content-center mb-0">
+								<button type="button" class="btn btn-primary">Registrar</button>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript"
 		src="webjars/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<div th:insert="layout/footer::footer"></div>
+	<div th:insert="layout/footer::footer"></div>
 </body>
 </html>

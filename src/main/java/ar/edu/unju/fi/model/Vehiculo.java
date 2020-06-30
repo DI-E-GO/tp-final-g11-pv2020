@@ -17,7 +17,7 @@ public class Vehiculo {
 	
 	@Column(name = "ID")
 	private Long id;
-	@Column(name = "PATENTE")
+	@Column(name = "PATENTE", length = 8)
 	private String patente;
 	@Column(name = "COLOR")
 	private String color;

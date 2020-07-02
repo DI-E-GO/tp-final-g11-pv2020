@@ -15,6 +15,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name = "registro")
 public class RegistroTracking {
@@ -24,11 +28,13 @@ public class RegistroTracking {
 	@Column(name = "ID")
 	private Long id;
 	private LocalDate fechaHora;
+	@Autowired
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "VEHICULO_ID")
 	private Vehiculo vehiculo;
 	@OneToMany(mappedBy = "registro", cascade = CascadeType.ALL)
 	private List<Tripulante> tripulantes = new ArrayList<Tripulante>();
+	@Autowired
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "LOCALIDAD_ID")
 	private Localidad localidad;

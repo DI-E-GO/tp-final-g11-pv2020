@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -25,7 +28,7 @@ public class Usuario {
 	private String nombreReal;
 	@Column(name = "APELLIDO", length = 100, nullable = true)
 	private String apellidoReal;
-	@Column(name = "TIPO_USU", length = 20, nullable = true)
+	@Column(name = "TIPO_USU", nullable = true)
 	private String tipoUsuario;
 	
 	public Usuario() {

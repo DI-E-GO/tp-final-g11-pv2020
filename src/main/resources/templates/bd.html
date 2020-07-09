@@ -15,14 +15,14 @@
 				<div class="card">
 					<div class="card-header text-center">Gestionar Usuarios</div>
 					<div class="card-body">
-						<form>
+						<form th:action="@{/administrador}" th:object="${usuarioDelForm}" method="POST">
 							<div class="form-group">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Nombre
 											de Usuario</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field="${usuarioDelForm.nombreUsuario}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -30,7 +30,7 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Contraseña</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field="${usuarioDelForm.password}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -39,7 +39,7 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">Nombre
 											Real</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field="${usuarioDelForm.nombreReal}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -48,7 +48,7 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">Apellido
 											Real</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field="${usuarioDelForm.apellidoReal}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -67,7 +67,7 @@
 							</div>
 
 							<div class="row form-group justify-content-center mb-0">
-								<button type="button" class="btn btn-primary mr-2">Registrar</button>
+								<button type="submit" class="btn btn-primary mr-2">Registrar</button>
 								<button type="button" class="btn btn-primary mr-2">Modificar</button>
 								<button type="button" class="btn btn-primary">Eliminar</button>
 

@@ -27,7 +27,7 @@ public class Tripulante {
 	@Column(name = "APELLIDO", length = 20, nullable = true)
 	private String apellido;
 	@Column(name = "NOMBRE", length = 100, nullable = true)
-	private String nombres;
+	private String nombre;
 	@Column(name = "NACIONALIDAD", length = 50, nullable = true)
 	private String nacionalidad;
 	@Autowired
@@ -55,12 +55,12 @@ public class Tripulante {
 		this.apellido = apellido;
 	}
 
-	public String getNombres() {
-		return nombres;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
+	public void setNombre(String nombres) {
+		this.nombre = nombres;
 	}
 
 	public String getNacionalidad() {

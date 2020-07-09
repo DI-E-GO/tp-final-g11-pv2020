@@ -16,7 +16,8 @@
 					<div class="card-header text-center">Gestionar Registros
 						Vehículos</div>
 					<div class="card-body">
-						<form>
+					
+						<form th:action="@{/save}" th:object="${registroTracking}" method="POST">
 							<div class="form-group">
 								<label for="vehiculos">Datos del Vehículo</label>
 								<div class="input-group mb-3">
@@ -24,13 +25,13 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">N°
 											Patente</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.patente}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Color</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.color}"  type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -39,13 +40,13 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Titular</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.titular}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Marca</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.marca}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -54,13 +55,13 @@
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Modelo</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.modelo}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Tipo</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.tipo}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -70,14 +71,14 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">N°
 											Chasis</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.numeroChasis}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">N°
 											Motor</span>
 									</div>
-									<input type="text" class="form-control"
+									<input th:field ="*{vehiculo.numeroMotor}" type="text" class="form-control"
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
@@ -87,7 +88,7 @@
 								<label for="exampleInputPassword1">Tripulantes</label>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-default">Documento</span>
+										<span class="input-group-text" id="inputGroup-sizing-default">N° Documento</span>
 									</div>
 									<input type="text" class="form-control"
 										aria-label="Sizing example input"
@@ -153,7 +154,7 @@
 							</div>
 
 							<div class="row form-group justify-content-center mb-0">
-								<button type="button" class="btn btn-primary">Registrar</button>
+								<button type="submit" class="btn btn-primary">Registrar</button>
 
 							</div>
 						</form>

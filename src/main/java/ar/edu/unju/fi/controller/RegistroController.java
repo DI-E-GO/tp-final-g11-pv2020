@@ -3,15 +3,7 @@ package ar.edu.unju.fi.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/DI-E-GO/tp-final-g11-pv2020.git
 import org.springframework.web.bind.annotation.GetMapping;
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/DI-E-GO/tp-final-g11-pv2020.git
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 

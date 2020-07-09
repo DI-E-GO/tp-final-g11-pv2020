@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -16,7 +18,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 @Table(name = "tripulantes")
-public class Tripulante {
+public class Tripulante implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	

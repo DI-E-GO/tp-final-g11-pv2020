@@ -29,8 +29,8 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/administrador")
-	public String crearUsuario(@ModelAttribute("usuarioDelForm") Usuario usuario, ModelMap model) {
+	public String crearUsuario(@ModelAttribute("usuarioDelForm") Usuario usuario, Model model) {
 		usuarioService.crearUsuario(usuario);
-		return "db";
+		return "redirect:/administrador";
 	}
 }

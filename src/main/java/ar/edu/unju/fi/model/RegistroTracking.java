@@ -1,5 +1,6 @@
 package ar.edu.unju.fi.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 @Table(name = "registro")
-public class RegistroTracking {
+public class RegistroTracking implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	

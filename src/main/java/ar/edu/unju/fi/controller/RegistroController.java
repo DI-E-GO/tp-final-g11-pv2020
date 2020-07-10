@@ -8,14 +8,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import ar.edu.unju.fi.model.RegistroTracking;
-import ar.edu.unju.fi.service.IRegistroTrackingService;
+import ar.edu.unju.fi.service.RegistroTrackingServiceImp;
 
 @Controller
 @RequestMapping
 public class RegistroController {
 	
 	@Autowired
-	IRegistroTrackingService registroTrackingService;
+	RegistroTrackingServiceImp registroTrackingService;
+	
 	
 	@Autowired
 	private RegistroTracking registroTracking;

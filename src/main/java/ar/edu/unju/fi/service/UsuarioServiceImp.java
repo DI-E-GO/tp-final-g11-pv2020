@@ -8,7 +8,7 @@ import ar.edu.unju.fi.model.Usuario;
 import ar.edu.unju.fi.repository.IUsuarioDAO;
 
 @Service
-public class IUsuarioServiceImp implements IUsuarioService {
+public class UsuarioServiceImp implements IUsuarioService {
 
 	@Autowired
 	IUsuarioDAO usuarioDAOImp;

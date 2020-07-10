@@ -25,12 +25,14 @@ public class UsuarioController {
 	@GetMapping("/administrador")
 	public String getUsuarioForm(Model model) {
 		model.addAttribute("usuarioDelForm", usuario);
+		model.addAttribute("listaUsuarios", usuarioService.listarTodos());
 		return "bd";
 	}
 	
 	@PostMapping("/administrador")
 	public String crearUsuario(@ModelAttribute("usuarioDelForm") Usuario usuario, Model model) {
 		usuarioService.crearUsuario(usuario);
+		model.addAttribute("listaUsuarios", usuarioService.listarTodos());
 		return "redirect:/administrador";
 	}
 }

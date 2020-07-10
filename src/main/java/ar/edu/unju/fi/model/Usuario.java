@@ -8,8 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.stereotype.Component;
+
 
 @Component
 @Entity
@@ -22,18 +26,22 @@ public class Usuario implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name="native", strategy = "native")
 	@Column(name = "ID")
 	private Long id;
-	
 	@Column(name = "NOMBRE_USU", length = 20, nullable = true)
+	@NotNull
+	@NotBlank
 	private String nombreUsuario;
 	@Column(name = "PASSWORD", length = 20, nullable = true)
+	@NotBlank
 	private String password;
 	@Column(name = "NOMBRE", length = 100, nullable = true)
+	@NotBlank(message = "Ingrese Nombre")
 	private String nombreReal;
 	@Column(name = "APELLIDO", length = 100, nullable = true)
+	@NotBlank
 	private String apellidoReal;
 	@Column(name = "TIPO_USU")
 	private String tipoUsuario;

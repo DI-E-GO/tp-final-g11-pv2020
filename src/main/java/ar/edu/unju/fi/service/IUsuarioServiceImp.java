@@ -1,6 +1,5 @@
 package ar.edu.unju.fi.service;
 
-import java.awt.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +8,7 @@ import ar.edu.unju.fi.model.Usuario;
 import ar.edu.unju.fi.repository.IUsuarioDAO;
 
 @Service
-public class UsuarioServiceImp implements IUsuarioService {
+public class IUsuarioServiceImp implements IUsuarioService {
 
 	@Autowired
 	IUsuarioDAO usuarioDAOImp;
@@ -33,9 +32,9 @@ public class UsuarioServiceImp implements IUsuarioService {
 	}
 
 	@Override
-	public List listar() {
+	public Iterable<Usuario> listarTodos() {
 		// TODO Auto-generated method stub
-		return null;
+		return usuarioDAOImp.findAll();
 	}
 
 }

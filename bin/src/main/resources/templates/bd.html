@@ -15,24 +15,23 @@
 				<div class="card">
 					<div class="card-header text-center">Gestionar Usuarios</div>
 					<div class="card-body">
-						<form th:action="@{/administrador}" th:object="${usuarioDelForm}"
-							method="POST">
+						<form th:action="@{/administrador}" th:object="${usuarioDelForm}" method="POST">
 							<div class="form-group">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Nombre
 											de Usuario</span>
 									</div>
-									<input th:field="${usuarioDelForm.nombreUsuario}" type="text"
-										class="form-control" aria-label="Sizing example input"
+									<input th:field="${usuarioDelForm.nombreUsuario}" type="text" class="form-control"
+										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Contraseña</span>
 									</div>
-									<input th:field="${usuarioDelForm.password}" type="text"
-										class="form-control" aria-label="Sizing example input"
+									<input th:field="${usuarioDelForm.password}" type="text" class="form-control"
+										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
 								<div class="input-group mb-3">
@@ -40,8 +39,8 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">Nombre
 											Real</span>
 									</div>
-									<input th:field="${usuarioDelForm.nombreReal}" type="text"
-										class="form-control" aria-label="Sizing example input"
+									<input th:field="${usuarioDelForm.nombreReal}" type="text" class="form-control"
+										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
 								<div class="input-group mb-3">
@@ -49,8 +48,8 @@
 										<span class="input-group-text" id="inputGroup-sizing-default">Apellido
 											Real</span>
 									</div>
-									<input th:field="${usuarioDelForm.apellidoReal}" type="text"
-										class="form-control" aria-label="Sizing example input"
+									<input th:field="${usuarioDelForm.apellidoReal}" type="text" class="form-control"
+										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
 								<div class="input-group mb-3">
@@ -58,10 +57,11 @@
 										<label class="input-group-text" for="inputGroupSelect01">Tipo
 											Usuario</label>
 									</div>
-									<select class="custom-select" id="inputGroupSelect01" th:field="${usuarioDelForm.tipoUsuario}">
-										<option value="Consultor">Consultor</option>
-										<option value="Registrador">Registrador</option>
-										<option value="Administrador">Administrador</option>
+									<select class="custom-select" id="inputGroupSelect01">
+										<option selected>Seleccionar...</option>
+										<option value="1">Consultor</option>
+										<option value="2">Registrador</option>
+										<option value="3">Administrador</option>
 									</select>
 								</div>
 							</div>
@@ -73,30 +73,42 @@
 
 							</div>
 						</form>
-
+						
 					</div>
 				</div>
 			</div>
 		</div>
 		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th scope="col">TIPO_USUA</th>
-					<th scope="col">NOM_USUA</th>
-					<th scope="col">NOMBRE</th>
-					<th scope="col">APELLIDO</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each = "usuario : ${listaUsuarios}">
-					<td th:text="${usuario.tipoUsuario}"></td>
-					<td th:text="${usuario.nombreUsuario}"></td>
-					<td th:text="${usuario.nombreReal}"></td>
-					<td th:text="${usuario.apellidoReal}"></td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="row justify-content-center mt-5 mb-5">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">First</th>
+									<th scope="col">Last</th>
+									<th scope="col">Handle</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Larry</td>
+									<td>the Bird</td>
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row justify-content-center mt-5 mb-5">
 			<div class="col-md-5 col-sm-11">
 				<div class="card">
 					<div class="card-header text-center">Gestionar localidades</div>
@@ -112,8 +124,8 @@
 										aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
-
-
+								
+								
 							</div>
 
 							<div class="row form-group justify-content-center mb-0">
@@ -123,7 +135,7 @@
 
 							</div>
 						</form>
-
+						
 					</div>
 				</div>
 			</div>

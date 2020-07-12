@@ -16,8 +16,8 @@ public class UsuarioServiceImp implements IUsuarioService {
 	@Override
 	public void crearUsuario(Usuario usuario) {
 		usuarioDAOImp.save(usuario);
-
 	}
+	
 
 	@Override
 	public Usuario modificar() {
@@ -26,8 +26,8 @@ public class UsuarioServiceImp implements IUsuarioService {
 	}
 
 	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
+	public void eliminar(Long id) {
+		usuarioDAOImp.deleteById(id);
 
 	}
 

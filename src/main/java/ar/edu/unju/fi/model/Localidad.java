@@ -17,6 +17,10 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "localidades")
 public class Localidad implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	

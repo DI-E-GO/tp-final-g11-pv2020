@@ -23,6 +23,10 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "registro")
 public class RegistroTracking implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	

@@ -81,6 +81,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
+					<th scope="col">ID</th>
 					<th scope="col">TIPO_USUA</th>
 					<th scope="col">NOM_USUA</th>
 					<th scope="col">NOMBRE</th>
@@ -89,6 +90,7 @@
 			</thead>
 			<tbody>
 				<tr th:each = "usuario : ${listaUsuarios}">
+					<td th:text="${usuario.id}"></td>
 					<td th:text="${usuario.tipoUsuario}"></td>
 					<td th:text="${usuario.nombreUsuario}"></td>
 					<td th:text="${usuario.nombreReal}"></td>
@@ -128,6 +130,21 @@
 				</div>
 			</div>
 		</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Localidad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each = "usuario : ${listaLocalidades}">
+					<td th:text="${localidades.id}"></td>
+					<td th:text="${localidades.nombre_loc}"></td>
+					
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>

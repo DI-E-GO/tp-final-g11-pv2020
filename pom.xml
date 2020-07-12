@@ -13,7 +13,7 @@
 	<artifactId>Grupo_11_TrackingDePersonas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Grupo_11_TrackingDePersonas</name>
-	<description>primer proyecto spring boot</description>
+	<description>Presentacion del Proyecto Final referente al Tracking de Personas</description>
 
 	<properties>
 		<java.version>1.8</java.version>

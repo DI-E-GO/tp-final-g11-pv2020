@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,16 +23,17 @@ public class Localidad implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+	@GenericGenerator(name="native", strategy = "native")
 	
 	@Column(name = "ID")
 	private Long id;
 	@Column(name = "NOMBRE_LOC", length = 100, nullable = true)
 	private String nombre;
-	
+	/*
 	@OneToOne(mappedBy = "localidad", fetch = FetchType.LAZY)
 	private RegistroTracking registro;
-	
+	*/
 	public Localidad() {
 		// TODO Auto-generated constructor stub
 	}
@@ -51,7 +53,7 @@ public class Localidad implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+/*
 	public RegistroTracking getRegistro() {
 		return registro;
 	}
@@ -59,5 +61,5 @@ public class Localidad implements Serializable{
 	public void setRegistro(RegistroTracking registro) {
 		this.registro = registro;
 	}
-	
+	*/
 }

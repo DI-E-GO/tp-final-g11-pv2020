@@ -32,7 +32,7 @@ public class LocalidadServiceImp implements ILocalidadService {
 	@Override
 	public void eliminar(Long id) {
 		// TODO Auto-generated method stub
-
+		localidadDAOImp.deleteById(id);
 	}
 
 	@Override

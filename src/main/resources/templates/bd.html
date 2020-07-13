@@ -192,11 +192,10 @@
 							<div class="form-group">
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="inputGroup-sizing-default">Localidad
-										</span>
+										<span class="input-group-text" id="inputGroup-sizing-default">Localidad</span>
 									</div>
-									<input type="text" class="form-control"
-										aria-label="Sizing example input"
+									<input th:field="${localidadForm.nombre}" type="text"
+										class="form-control" aria-label="Sizing example input"
 										aria-describedby="inputGroup-sizing-default">
 								</div>
 
@@ -204,9 +203,11 @@
 							</div>
 
 							<div class="row form-group justify-content-center mb-0">
-								<button type="button" class="btn btn-primary mr-2">Guardar</button>
-								<button type="button" class="btn btn-primary mr-2">Cancelar</button>
+								<button type="button" class="btn btn-primary mr-2"
+									data-toggle="modal" data-target="#guardarLocalidad">Guardar</button>
+								<a class="btn btn-secondary" th:href="@{'/cancelar'}">Cancelar</a>
 							</div>
+							
 						</form>
 
 					</div>
@@ -221,18 +222,45 @@
 					<th scope="col">ACCIONES</th>
 				</tr>
 			</thead>
+			<!--  
 			<tbody>
-				<tr th:each = "usuario : ${listaLocalidades}">
+				<tr th:each = "localidad : ${listaLocalidades}">
 					<td th:text="${localidades.id}"></td>
-					<td th:text="${localidades.nombre_loc}"></td>
-					<td><a href="#" th:href="@{'/editar/'+${usuario.id}} "
+					<td th:text="${localidades.nombre}"></td>
+					<td><a href="#" th:href="@{'/editar/'+${localidad.id}} "
 						class="btn btn-warning">Editar</a> <a href="#"
-						th:onclick="'javascript:confirmarEliminar(\''+${usuario.id}+'\');'"
+						th:onclick="'javascript:confirmarEliminar(\''+${localidad.id}+'\');'"
 						class="btn btn-danger">Eliminar</a></td>
 					
 				</tr>
 			</tbody>
+			-->
 		</table>
+		
+		<!-- Modal Localidad-->
+		<div class="modal fade" id="guardarLocalidad" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Gestionar Localidad</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				<div class="modal-body">Esta seguro de guardar los cambios?</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Cerrar</button>
+						<input type="submit" class="btn btn-primary"
+							th:value="${editMode}?'Modificar':'Registrar'">
+					</div>
+				</div>
+			</div>
+		</div>
+							
 	</div>
 
 	

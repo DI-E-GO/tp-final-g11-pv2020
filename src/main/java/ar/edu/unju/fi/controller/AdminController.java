@@ -34,7 +34,7 @@ public class AdminController {
 		model.addAttribute("listaUsuarios", usuarioServices.listarTodos());
 		return "bd";
 	}
-	
+		
 	@PostMapping("/administrador")
 	public String crearUsuario(@ModelAttribute("usuarioDelForm") Usuario usuario, ModelMap model) {
 		usuarioServices.crearUsuario(usuario);
